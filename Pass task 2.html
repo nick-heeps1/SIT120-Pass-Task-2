@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1> Javascript concepts (String methods) </h1>
+        <h2> finding string length </h2>
+        <p> the length of the string is </p>
+        <p id="demo"></p>
+        <script>
+            let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            document.getElementById("demo").innerHTML = text.length;
+        </script>
+        <h2> slicing string </h2>
+        <p> the sliced () method extracts parts of a string and returns the extracted parts in a new string </p>
+        <p id="demo1"></p>
+        <script>
+            let str = "Apple, Samsung, Nokia";
+            let res = str.slice(7, 14);
+            document.getElementById("demo1").innerHTML = res;
+        </script>
+        <h2> replacing string </h2>
+        <p> the replace () method replaces a specified value with another value in a string </p>
+        <p> replace "Apple" with "Samsung" in the text below</p>
+        <button onclick="myFunction()">Try it</button>
+        <p id="demo2"> please visit Apple </p>
+        <script>
+            function myFunction() {
+                let text = document.getElementById("demo2").innerHTML;
+                document.getElementById("demo2").innerHTML = text.replace("Apple", "Samsung");
+
+            }
+        </script>
+        <h2> the replaceAll method</h2>
+        <p> the replaceAll () method replaces all occurrences of a specified value with another value in a string </p>
+        <p> replace all "Apple" with "Samsung" in the text below</p>
+        <button onclick="myFunction1()">Try it</button>
+        <p id="demo3"> please visit Apple, the Apple store is open 7 days a week </p>
+        <script>
+            function myFunction1() {
+                let text = document.getElementById("demo3").innerHTML;
+                document.getElementById("demo3").innerHTML = text.replaceAll("Apple", "Samsung");
+
+            }
+        </script>
+        <h2> converting to upper and lower case </h2>
+        <p> the toUpperCase () method converts a string to uppercase letters </p>
+        <button onclick="myFunction2()">Try it</button>
+        <p id="demo4">Apple Inc</p>
+        <script>
+            function myFunction2() {
+                let text = document.getElementById("demo4").innerHTML;
+                document.getElementById("demo4").innerHTML = text.toUpperCase();
+
+            }
+        </script>
+    </body>
+    <body>
+        <h1>Javascript numbers</h1>
+        <h2> extra large or extra small numbers</h2>
+        <p> these numbers can be written with scientific notations</p>
+        <p id="demo5"></p>
+        <script>
+            let x = 123e5;
+            let y = 123e-5;
+            document.getElementById("demo5").innerHTML = x + "<br>" + y;
+        </script>
+    </body>
+</html>    
