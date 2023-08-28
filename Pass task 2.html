@@ -59,9 +59,47 @@
         <p> these numbers can be written with scientific notations</p>
         <p id="demo5"></p>
         <script>
-            let x = 123e5;
-            let y = 123e-5;
-            document.getElementById("demo5").innerHTML = x + "<br>" + y;
+            let a = 123e5;
+            let b = 123e-5;
+            document.getElementById("demo5").innerHTML = a + "<br>" + b;
+        </script>
+        <h2> integer precision</h2>
+        <p> integers are accurate up to 15 digits</p>
+        <p id="demo6"></p>
+        <script>
+            let c = 999999999999999;
+            let d = 9999999999999999;
+            document.getElementById("demo6").innerHTML = c + "<br>" + d;
+        </script>
+        <h2> floating precision</h2>
+        <p> floating point numbers are not always accurate </p>
+        <p id="demo7"></p>
+        <script>
+            let e = 0.2 + 0.1;
+            document.getElementById("demo7").innerHTML = "0.2 + 0.1 = " + e;
+        </script>
+        <h2> adding numbers and strings</h2>
+        <p> adding a number and a string will return a string </p>
+        <p id="demo8"></p>
+        <script>
+            let f = 5 + 5;
+            let g = "5" + 5;
+            let h = "hello" + 5;
+            document.getElementById("demo8").innerHTML = f + "<br>" + g + "<br>" + h;
+        </script>
+        <h2>Number strings</h2>
+        <p> Adding numbers and strings can both provide the same result with different code</p>
+        <p id="demo9"></p>
+        <script>
+            let i = 5;
+            let j = 10;
+            let k = i + j;
+            document.getElementById("demo9").innerHTML = k;
+            let l = "5";
+            let m = "10";
+            let n = l + m;
+            document.getElementById("demo9").innerHTML = n;
         </script>
     </body>
-</html>    
+</html>
+            
