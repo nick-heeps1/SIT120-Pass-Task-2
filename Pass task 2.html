@@ -88,17 +88,116 @@
             document.getElementById("demo8").innerHTML = f + "<br>" + g + "<br>" + h;
         </script>
         <h2>Number strings</h2>
-        <p> Adding numbers and strings can both provide the same result with different code</p>
+        <p> Adding numbers and strings provides a different result with very similar code</p>
         <p id="demo9"></p>
         <script>
             let i = 5;
             let j = 10;
             let k = i + j;
             document.getElementById("demo9").innerHTML = k;
+        </script>
+        <P id="demo10"></p>
+        <script>
             let l = "5";
             let m = "10";
             let n = l + m;
-            document.getElementById("demo9").innerHTML = n;
+            document.getElementById("demo10").innerHTML = n;
+        </script>
+        <h1> Array methods</h1>
+        <h2> the length property</h2>
+        <p> the length property provides an easy way to append a new element to an array</p>
+        <p id="demo11"></p>
+        <script>
+            const cars = ["BMW", "Mercedes", "VW", "TOYOTA"];
+            document.getElementById("demo11").innerHTML = cars;
+            cars[cars.length] = "AUDI";
+            document.getElementById("demo11").innerHTML = cars;
+        </script>
+        <h2> the pop method</h2>
+        <p> the pop () method removes the last element from an array</p>
+        <p id="demo12"></p>
+        <script>
+            document.getElementById("demo12").innerHTML = cars;
+            cars.pop();
+            document.getElementById("demo12").innerHTML = cars;
+        </script>
+        <h2> changing elements</h2>
+        <p> array elements are accessed using their index number</p>
+        <p id="demo13"></p>
+        <script>
+            cars[0] = "HONDA";
+            document.getElementById("demo13").innerHTML = cars;
+        </script>
+        <h2> deleting elements</h2>
+        <p> since javascript arrays are objects, elements can be deleted by using the javascript operator delete</p>
+        <p id="demo14"></p>
+        <script>
+            delete cars[0];
+            document.getElementById("demo14").innerHTML = cars;
+        </script>
+        <h2> the splice method</h2>
+        <p> the splice () method can be used to add new items to an array</p>    
+        <p id="demo15"></p>
+        <script>
+            cars.splice(2, 0, "HOLDEN", "FORD");
+            document.getElementById("demo15").innerHTML = cars;
+        </script>
+        <h1>Dates</h1>
+        <h2> javascript new date</h2>
+        <p> new date() creates a new date object with the current date and time</p>
+        <p id="demo16"></p>
+        <script>
+            const D = new Date();
+            document.getElementById("demo16").innerHTML = D;
+        </script>
+        <h2> new Date(date string)</h2>
+        <p> new date(date string) creates a new date object from a date string</p>
+        <p id="demo17"></p>
+        <script>  
+            const D1 = new Date("October 13, 2014 11:13:00");
+            document.getElementById("demo17").innerHTML = D1;
+        </script>
+        <h2> new Date(year, month, day, hours, minutes, seconds, milliseconds)</h2>
+        <p> new date(year, month, day, hours, minutes, seconds, milliseconds) creates a new date object with a specified date and time</p>
+        <p id="demo18"></p>
+        <script>
+            const D2 = new Date(2014, 0, 25, 11, 13, 0, 0);
+            document.getElementById("demo18").innerHTML = D2;
+        </script>
+        <h2> using 6,4,3 or 2 numbers</h2>
+        <p> 6 numbers specify year, month, day, hour, minute, second:</p>
+        <p id="demo19"></p>
+        <script>
+            const D3 = new Date(2014, 0, 25, 11, 13, 0);
+            document.getElementById("demo19").innerHTML = D3;
+        </script>
+        <h2> previous century</h2>
+        <p> two digit years above 68 are assumed to be 19xx, while two digit years below 68 are assumed to be 20xx</p>
+        <p id="demo20"></p>
+        <script>
+            const D4 = new Date(99, 11, 24);
+            document.getElementById("demo20").innerHTML = D4;
+        </script>   
+        <h1>functions</h1>
+        <h2> performing calculations</h2>
+        <p> functions can be used to perform repeated calculations</p>
+        <p id="demo21"></p>
+        <script>
+            function myFunction(p1, p2) {
+                return p1 * p2;
+            }
+            let result = myFunction(4, 3);
+            document.getElementById("demo21").innerHTML = result;
+        </script>
+        <h2> (call) function </h2>
+        <p>invoke (call) a function that converts Fahrenheit to celsius:</p>
+        <p id="demo22"></p>
+        <script>
+            function toCelsius(f) {
+                return (5 / 9) * (f - 10);
+            }
+            let value = toCelsius(77);
+            document.getElementById("demo22").innerHTML = value;
         </script>
     </body>
 </html>
